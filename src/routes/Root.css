@@ -53,8 +53,10 @@
 }
 
 .root .subtitle a:hover {
-    background-color: #84A98C;
+    background-color: #52796f;
+        color: #CAD2C5;
     border-radius: 12px;
+    border-bottom: none;
 }
 
 .blog-summary {
