@@ -36,20 +36,51 @@ export default function Root() {
             <div className="cv-sections">
                 <div className="cv-experience">
                     <h1>Experience.</h1>
-                    <div className="cv-experience-item">
-                        
+                    <div className="cv-experience-items">
+                        <div className="cv-experience-items">
+                            <div className="cv-experience-item">
+                                <span className="cv-jobtitle">React Native Developer</span>
+                                <div className="cv-leftalign">
+                                    <span className="cv-company">Abair: Trinity College, Dublin </span> &nbsp;&mdash;&nbsp; <span>May 2022  / Present</span>
+                                </div>
+                            </div>
+                            <div className="cv-experience-item">
+                                <span className="cv-jobtitle">Programming Teacher</span>
+                                <div className="cv-leftalign">
+                                    <span className="cv-company">Olus Education</span> &nbsp;&mdash;&nbsp; <span>March 2021  / Present</span>
+                                </div>
+                            </div>
+
+                            <div className="cv-experience-item">
+                                <span className="cv-jobtitle">Software Engineering Intern</span>
+                                <div className="cv-leftalign">
+                                    <span className="cv-company">Microsoft Development Centre Estonia</span> &nbsp;&mdash;&nbsp; <span>June 2021  / September 2022</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div className="cv-education">
+                    
+                <div className="cv-experience">
                     <h1>Education.</h1>
-                    <p>test</p>
-                </div>
-
-                <div className="cv-stack">
-                    <h1>Stack.</h1>
+                    <div className="cv-experience-items">
+                        <div className="cv-experience-item">
+                            <span className="cv-jobtitle">B.A (Mod) Computer Science & Language</span>
+                            <div className="cv-leftalign">
+                                <span className="cv-company">Trinity College, Dublin </span> &nbsp;&mdash;&nbsp; <span>September 2020  / Present</span>
+                            </div>
+                        </div>
+                        <div className="cv-experience-item">
+                            <span className="cv-jobtitle">French Erasmus Exchange</span>
+                            <div className="cv-leftalign">
+                                <span className="cv-company">Université Grenoble Alpes </span> &nbsp;&mdash;&nbsp; <span>September 2022  / June 2023</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div className="footer-space"></div>
 
             <Footer/>
         </div>

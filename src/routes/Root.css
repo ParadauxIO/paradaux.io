@@ -78,21 +78,48 @@
 }
 
 .cv-sections {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
+    flex: 1;
 }
 
 .cv-experience {
-    display: flex;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 50rem;
     text-align: left;
+    margin-left: 120px;
+}
+    
+.cv-experience-items {
 
+}
+
+.cv-experience-item {
+    text-align: left;
+    margin: 24px 0 24px 0;
+}
+
+.cv-leftalign {
+    display: flex;
+}
+
+.cv-jobtitle {
+    font-size: 24px;
+}
+
+.cv-company {
+    text-align: left;
+    font-weight: bold;
 }
 
 .cv-education {
     display: flex;
     text-align: left;
 }
+
+.footer-space {
+    margin-bottom: 45px;
+}
+
 
 .cv-stack {}
