@@ -16,6 +16,7 @@
 .nav-entries {
     display: flex;
     font-size: 18px;
+    flex-wrap: wrap;
 }
 
 .common-nav .nav-entry {
