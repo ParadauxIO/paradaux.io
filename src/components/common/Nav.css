@@ -1,0 +1,35 @@
+.common-nav     {
+    background-color: #2F3E46;
+    flex: 1;
+    display: flex;
+    padding: 4px 3px 3px 13px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.common-nav .title {
+    display: flex;
+    color: #CAD2C5;
+    font-size: 28px;
+}
+
+.nav-entries {
+    display: flex;
+    font-size: 18px;
+}
+
+.common-nav .nav-entry {
+    display: flex;
+    justify-content: center;
+    margin: 5px 15px 5px 15px;
+    color: #CCC;
+    text-decoration: none;
+    border: 1px solid #52796F;
+    border-radius: 45px;
+    padding: 7px 23px 7px 23px;
+}
+
+.common-nav .nav-entry:hover {
+    background-color: #52796F;
+    color: #CAD2C5;
+}
