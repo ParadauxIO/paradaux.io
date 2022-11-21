@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom"
 import "./Nav.css"
 
 function NavEntry({ title, href }) { 
     return (
-        <a className="common-nav nav-entry" href={href}>{title}</a>
+        <Link className="common-nav nav-entry" to={href}>{title}</Link>
     )
 }
 
