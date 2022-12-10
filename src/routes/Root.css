@@ -1,5 +1,6 @@
 .root {
     flex: 1;
+    text-align: center;
 }
 
 .root .hero {
