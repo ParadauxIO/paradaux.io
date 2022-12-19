@@ -116,6 +116,7 @@
 .cv-education {
     display: flex;
     text-align: left;
+    margin-bottom: 45px;
 }
 
 .footer-space {
