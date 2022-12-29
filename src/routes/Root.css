@@ -85,8 +85,7 @@
 .cv-experience {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-gap: 50rem;
+    grid-template-columns: 60% 40%;
     text-align: left;
     margin-left: 120px;
 }
