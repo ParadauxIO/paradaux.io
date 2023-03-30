@@ -1,0 +1,34 @@
+.blog-post {
+    .content {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .blog-header {
+        display: flex;
+        align-items: center;
+    
+        h1 {
+    
+        }
+    
+        a {
+    
+        }
+    
+        span {
+            margin-left: auto;
+        }
+    }
+    
+    .blog {
+        flex: 6;
+        padding: 0.25rem 2rem;
+        overflow-y: scroll;
+        font-family: 'Open Sans', sans-serif;
+        overflow-y: scroll;
+        max-height: 90dvh;
+    }
+    
+}

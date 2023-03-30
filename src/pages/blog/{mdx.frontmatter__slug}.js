@@ -1,11 +1,26 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import Navbar from '../../components/common/Navbar';
+import "./blog-page.scss"
+import Bio from '../../components/Bio';
 
 export default function BlogPost({data, children}) {
   return (
-    <div>
-        <p>{data.mdx.frontmatter.date}</p>
-        {children}
+    <div className='blog-post'>
+      <Navbar hasBg={true}/>
+      <div className='content'>
+        <Bio/>
+        <section className='blog'>
+          <div className='blog-header'>
+            <Link to="/">Back</Link>
+            <h1>{data.mdx.frontmatter.title}</h1> 
+            <span>{data.mdx.frontmatter.date}</span>
+          </div>
+          <div className='mdx-output'>
+            {children}
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
