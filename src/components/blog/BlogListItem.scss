@@ -1,0 +1,50 @@
+@import "../../colors";
+
+.blog {
+    margin-top: 5rem;
+}
+
+.blog-list-item {
+    background-color: #EEE;
+    border-radius: 12px;
+    margin: 0.5rem 0.75rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+
+    img {
+        flex: 1;
+        width: 64px;
+        height: 64px;
+        padding: 7;
+    }
+
+    div {
+        flex: 7;
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 800;
+            }
+    
+            span {
+                font-family: 'Nunito', sans-serif;
+            }
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        a {
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+}
