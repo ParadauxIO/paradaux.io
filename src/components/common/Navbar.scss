@@ -15,9 +15,9 @@ header {
         padding-bottom: 12px;
 
         padding-left: 128px;
-        padding-right: 128px;
+        padding-right: 30px;
 
-        justify-content: space-between;
+        justify-content: flex-end;
 
         width: 100%;
         max-width: 1600px;
@@ -49,7 +49,6 @@ header {
             display: flex;
             gap: 16px;
             align-items: center;
-
             a {
                 font-family: 'Open Sans', sans-serif;
                 color: inherit;
@@ -113,10 +112,17 @@ header {
 
     @media (max-width: 767px) {
         .container {
-
             padding-left: 11px;
             padding-right: 11px;
             padding-bottom: 12px;
+
+            justify-content: space-between;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .mb-header {
+            display: none;
         }
     }
 
@@ -204,4 +210,10 @@ header {
 
 .mobile-nav.is-active {
     left: 0;
+}
+
+.bio-link {
+    text-decoration: none;
+    color: $primary-light;
+    font-weight: 600;
 }
