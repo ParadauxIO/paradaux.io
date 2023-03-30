@@ -10,13 +10,18 @@ export default function BlogListItem({item}) {
             <div>
                 <div className="title">
                     <h1>{item.frontmatter.title}</h1>
-                    <span>{item.frontmatter.date}</span>
+                    
                 </div>
                 <p>
                     {item.excerpt}
                 </p>
                 <Link to={`/blog/${item.frontmatter.slug}`}>
-                    Read more...
+                    <div className="bottom">
+                        <p>
+                            Read more...
+                        </p>
+                        <span>{item.frontmatter.date}</span>
+                    </div>
                 </Link>
             </div>
         </article>

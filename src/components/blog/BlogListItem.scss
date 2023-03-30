@@ -22,15 +22,9 @@
     div {
         flex: 7;
         .title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
 
-            h1 {
-                font-family: 'Nunito', sans-serif;
-                font-weight: 800;
-            }
-    
             span {
                 font-family: 'Nunito', sans-serif;
             }
@@ -41,10 +35,25 @@
         }
 
         a {
-            font-family: 'Nunito', sans-serif;
-            font-weight: bold;
             text-decoration: none;
-            color: $primary;
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-weight: bold;
+                color: $primary;
+            }
+
+            span {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 0.8rem;
+                color: $primary-dark
+            }
         }
     }
 }
