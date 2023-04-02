@@ -19,11 +19,24 @@
         padding: 7;
     }
 
+    .light-button {
+        margin: 0.4rem;
+        padding: 0.4rem;
+        border: 2px solid;
+        border-radius: 1.25rem;
+    }
+
+    .light-button:hover {
+        background-color: $primary;
+        color: $primary-light;
+    }
+
     div {
         flex: 7;
         .title {
             font-family: 'Nunito', sans-serif;
             font-weight: 800;
+            font-size: 1.3rem;
 
             span {
                 font-family: 'Nunito', sans-serif;
@@ -51,7 +64,7 @@
 
             span {
                 font-family: 'Open Sans', sans-serif;
-                font-size: 0.8rem;
+                font-size: 1rem;
                 color: $primary-dark
             }
         }

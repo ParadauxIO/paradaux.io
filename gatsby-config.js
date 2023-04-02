@@ -9,9 +9,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass", 
     "gatsby-plugin-sitemap", 
-    "gatsby-plugin-mdx", 
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-mdx`,
+
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

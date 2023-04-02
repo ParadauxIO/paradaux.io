@@ -4,6 +4,7 @@ import Navbar from "../components/common/Navbar"
 import "./index.scss"
 import { graphql } from 'gatsby'
 import Bio from "../components/Bio"
+import BlogFooter from "../components/blog/BlogFooter"
 
 const IndexPage = ({ data }) => {
   return (
@@ -13,7 +14,10 @@ const IndexPage = ({ data }) => {
             <Bio/>
             <section className="blog">
               <h1 className="section-title">Blog</h1>
-              {data.allMdx.nodes.map(item => <BlogListItem key={item.id} item={item}/>)}
+              {
+                data.allMdx.nodes.map(item => <BlogListItem key={item.id} item={item}/>)
+              }
+              <BlogFooter/>
             </section>
         </div>
       </main>
@@ -33,7 +37,7 @@ query {
         slug
       }
       id
-      excerpt
+      excerpt(pruneLength: 800)
     }
   }
 }

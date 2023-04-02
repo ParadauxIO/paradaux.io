@@ -1,5 +1,9 @@
 @import "../colors";
 
+main {
+    width: 100%;
+}
+
 .content {
     min-height: 100dvh;
     display: flex;
@@ -8,7 +12,6 @@
 
 .blog {
     flex: 6;
-    overflow-y: scroll;
 }
 
 .section-title {
