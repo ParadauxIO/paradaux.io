@@ -25,6 +25,11 @@ export default function Bio() {
 
             <p>Here you can find various essays of mine, as well as tutorials and code snippets you might find useful.</p>
           </div>
+
+          <div className='bio-card down'>
+            <span className='quote'>The best way to predict the future is to invent it.</span>
+            <span className='quote-credit'> ~ Alan Kay (1970)</span>
+          </div>
         </div>
       </section>
     )

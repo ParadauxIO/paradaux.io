@@ -2,20 +2,21 @@
 
 main {
     width: 100%;
+
+    .content {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .blog {
+        flex: 6;
+    }
+    
+    .section-title {
+        font-family: 'Nunito', sans-serif;
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
 }
 
-.content {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: row;
-}
-
-.blog {
-    flex: 6;
-}
-
-.section-title {
-    font-family: 'Nunito', sans-serif;
-    padding-left: 1rem;
-    font-size: 2rem;
-}

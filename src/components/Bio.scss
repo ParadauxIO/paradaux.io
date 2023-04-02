@@ -63,6 +63,20 @@
             font-weight: 600;
         }
     }
+
+    .down {
+        margin-top: 2rem;
+    }
+    
+    .quote {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.1rem;
+    }
+
+    .quote-credit {
+        font-family: 'Open Sans', sans-serif;
+        margin-left: auto;
+    }
 }
 
 @media (max-width: 1163px) {
