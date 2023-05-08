@@ -31,18 +31,19 @@ export default function Header() {
                             Home
                         </a>
                     </li>
+
                     <li>
-                        <a href="/blog">
+                        <a href="/cv.pdf">
                             C.V
                         </a>
                     </li>
                     <li>
-                        <a href="/cv.pdf">
+                        <a href="https://www.linkedin.com/in/r%C3%ADan-errity/">
                             LinkedIn
                         </a>
                     </li>
                     <li>
-                        <a href="/contact">
+                        <a href="mailto:website@paradaux.io">
                             Email Me
                         </a>
                     </li>
