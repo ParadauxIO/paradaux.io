@@ -6,14 +6,40 @@ $bg-color: #1C2025;
 //     height: 100dvh;
 // }
 
+.index {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: $bg-color;
+}
+
+.left-bar {
+    position: relative;
+}
+
+@media (min-width: 46em) {
+    .index {
+        grid-template-columns: 1fr 2.7fr;
+    }
+
+    .intro {
+        display: flex;
+        gap: 0.5rem;
+        max-height: 60dvh;
+        font-size: 1.5rem;
+    }
+
+    .blog {
+        overflow-y: auto;
+    }
+}
+
 .intro {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
     position: relative;
-    background-color: $bg-color;
-    width: 100;
     padding: 0 1.25rem 2rem 1.25rem;
+
 
     p {
         font-size: large;
@@ -31,13 +57,20 @@ $bg-color: #1C2025;
     }
 }
 
+.headshot {
+    justify-self: center;
+    border-radius: 50%;
+    max-width: 200px;
+}
+
 .blog {
     padding-top: 1rem;
     background-color: #FAF9F6;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin: auto 1rem;
+
+    padding: 1rem;
 
     .blog-title {
         padding-left: 1rem;
@@ -47,8 +80,8 @@ $bg-color: #1C2025;
 
 // Do the cool background circles thingy
 .circle-scatter {
-    height: 100%;
     width: 100%;
+    height: 100%;
 
     background: url("../assets/circle-scatter.svg");
     background-repeat: no-repeat;
@@ -59,8 +92,6 @@ $bg-color: #1C2025;
     inset: auto 0 0 auto;
     bottom: 0px;
     margin: 0;
-
     opacity: 0.3;
     background-position: top left;
 }
-

@@ -1,38 +1,43 @@
 ---
 import BlogPost from '../components/BlogPost.astro';
+import Footer from '../components/Footer.astro';
 import RootLayout from '../layouts/RootLayout.astro';
 import "./index.scss"
+import img from "../../public/rian-headshot.png"
 
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
-<RootLayout>
-	<main>
-		<div class="intro">
+<RootLayout title="Home">
+	<main class="index">
+		<div class="left-bar">
 			<div class="circle-scatter" aria-hidden="true"/>
-			<p class="sr-only">An introduction about me.</p>
-			<p>
-				I'm a 21-year-old software developer from Ireland. I'm interested in a lot
-				of different things from linguistics, to pedagogy, to productivity
-				systems.
-			</p>
-
-			<p> 
-				I'm currently in the process of finishing my degree in Computer Science
-				Linguistics and French from Trinity College, Dublin.
-			</p>
-
-			<p>
-				I'm working with my colleague and Co-Founder <a href="">Oskar Mroz</a> to build
-				interesting software products under the <a href="">Clove</a> brand.
-			</p>
-
-			<p> 
-				Check out my <a href="/cv.pdf">C.V</a> or connect with me on <a href="">LinkedIn</a>, I'm always happy to
-				meet new people. 
-			</p>
+			<div class="intro">
+				<p class="sr-only">An introduction about me.</p>
+				<img class="headshot desktop-only" src={img} alt="A picture of Rían"/>
+				<p>
+					I'm a 21-year-old software developer from Ireland. I'm interested in a lot
+					of different things from linguistics, to pedagogy, to productivity
+					systems.
+				</p>
+	
+				<p> 
+					I'm currently in the process of finishing my degree in Computer Science
+					Linguistics and French from Trinity College, Dublin.
+				</p>
+	
+				<p>
+					I'm working with my colleague and Co-Founder <a href="">Oskar Mroz</a> to build
+					interesting software products under the <a href="">Clove</a> brand.
+				</p>
+	
+				<p> 
+					Check out my <a href="/cv.pdf">C.V</a> or connect with me on <a href="">LinkedIn</a>, I'm always happy to
+					meet new people. 
+				</p>
+			</div>
 		</div>
-
+		
 		<div class="blog">
 			<h1 class="blog-title">Blog</h1>
 			{
@@ -48,5 +53,5 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 			}
 		</div>
 </main>
-
+<Footer />
 </RootLayout>
