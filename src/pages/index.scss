@@ -7,6 +7,7 @@ $bg-color: #1C2025;
 // }
 
 .index {
+    height: 100dvh;
     display: grid;
     grid-template-columns: 1fr;
     background-color: $bg-color;
