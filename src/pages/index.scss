@@ -33,6 +33,9 @@ $bg-color: #1C2025;
 
 .blog {
     background-color: #FAF9F6;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
 }
 
 
