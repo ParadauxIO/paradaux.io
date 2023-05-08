@@ -32,10 +32,16 @@ $bg-color: #1C2025;
 }
 
 .blog {
+    padding-top: 1rem;
     background-color: #FAF9F6;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0rem;
+    gap: 1rem;
+    margin: auto 1rem;
+
+    .blog-title {
+        padding-left: 1rem;
+    }
 }
 
 

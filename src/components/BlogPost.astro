@@ -1,5 +1,5 @@
 ---
-const { title, url } = Astro.props;
+const { title, url, summary } = Astro.props;
 import "./BlogPost.scss"
 ---
 
@@ -7,4 +7,10 @@ import "./BlogPost.scss"
     <h1>
         <a href={url}>{title}</a>
     </h1>
+
+    <p>
+        {summary}
+    </p>
+
+    <a href={url}>Read more...</a>
 </div>
