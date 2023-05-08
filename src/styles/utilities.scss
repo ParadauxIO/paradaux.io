@@ -6,6 +6,16 @@
     gap: var(--gap, 1rem);
 }
 
+.desktop-only {
+	visibility: visible;
+}
+
+@media (max-width: 45rem) {
+	.desktop-only {
+		visibility: hidden;
+	}
+}
+
 /*
 	Improved screen reader only CSS class
 	@author Gaël Poupard
