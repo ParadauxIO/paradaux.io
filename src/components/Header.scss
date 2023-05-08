@@ -1,8 +1,10 @@
 $nav-text-color: white;
 
 .primary-header {
+    padding: 1rem;
     .title {
-        margin: 2rem;
+        
+        padding-left: 1.25rem;
 
         a {
             text-decoration: none;
@@ -32,7 +34,7 @@ $nav-text-color: white;
     outline: none;
     border: none;
     z-index: 9999;
-    top: 2.1rem;
+    top: 1rem;
     right: 1rem;
 }
 
@@ -61,7 +63,7 @@ $nav-text-color: white;
     }
 }
 
-@media (max-width: 35em) {
+@media (max-width: 45em) {
     .primary-navigation {
         position: fixed;
         inset: 0 0 0 30%;

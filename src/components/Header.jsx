@@ -28,22 +28,22 @@ export default function Header() {
                 >
                     <li className="active">
                         <a href="/">
-                            1
+                            Home
                         </a>
                     </li>
                     <li>
                         <a href="/blog">
-                            2
+                            C.V
                         </a>
                     </li>
                     <li>
                         <a href="/cv.pdf">
-                            3
+                            LinkedIn
                         </a>
                     </li>
                     <li>
                         <a href="/contact">
-                            4
+                            Email Me
                         </a>
                     </li>
                 </ul>
