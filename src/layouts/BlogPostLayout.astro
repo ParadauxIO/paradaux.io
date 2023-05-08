@@ -1,8 +1,19 @@
 ---
-import RootLayout from '../layouts/RootLayout.astro';
-import '../styles/global.scss';
----
+import RootLayout from "./RootLayout.astro";
+import "./BlogPostLayout.scss"
 
+const { frontmatter } = Astro.props;
+---
 <RootLayout>
-	<slot/>
+	<main class="blog-post-page">
+		<h1>
+			{frontmatter.title}
+		</h1>
+	
+		<main >
+			<slot />
+		</main>
+	</main>
+
+
 </RootLayout>
