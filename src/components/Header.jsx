@@ -6,7 +6,9 @@ export default function Header() {
 
     return (
         <header className="primary-header flex">
-            <h1 className="title">Rían Errity</h1>
+            <h1 className="title">
+                <a href="/">Rían Errity</a>
+            </h1>
     
             <button
                 className={"hamburger" + (navOpen ? " is-active" : "")}

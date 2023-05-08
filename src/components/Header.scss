@@ -3,6 +3,11 @@ $nav-text-color: white;
 .primary-header {
     .title {
         margin: 2rem;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
     background-color: #1C2025;
     align-items: center;
