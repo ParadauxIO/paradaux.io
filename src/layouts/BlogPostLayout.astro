@@ -4,7 +4,12 @@ import "./BlogPostLayout.scss"
 
 const { frontmatter } = Astro.props;
 ---
-<RootLayout>
+<RootLayout 
+	author={frontmatter.author}
+	description={frontmatter.summary30}
+	type={"article"}
+	title={frontmatter.title}
+>
 	<main class="blog-post-page">
 		<h1>
 			{frontmatter.title}
@@ -14,6 +19,4 @@ const { frontmatter } = Astro.props;
 			<slot />
 		</main>
 	</main>
-
-
 </RootLayout>
