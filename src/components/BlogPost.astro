@@ -1,0 +1,10 @@
+---
+const { title, url } = Astro.props;
+import "./BlogPost.scss"
+---
+
+<div class="blog-post">
+    <h1>
+        <a href={url}>{title}</a>
+    </h1>
+</div>

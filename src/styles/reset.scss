@@ -1,0 +1,82 @@
+// Scroll bar
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+// Track on Hover
+::-webkit-scrollbar-track:hover {
+    background: none;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+    background: #6a6a6a;
+}
+
+// Handle on Hover
+::-webkit-scrollbar-thumb:hover {
+    background: #909090;
+}
+
+// Removes underline from button if wrapped in an anchor tag
+a:has(> .MuiButton-root) {
+    text-decoration: none !important;
+}
+
+
+// Rían's CSS Reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100dvh;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}

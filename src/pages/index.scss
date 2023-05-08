@@ -1,22 +1,57 @@
-@import "../colors";
+$white: #E6E9EA;
+$white-100: #bfbfbf;
+$bg-color: #1C2025;
 
-main {
+// body {
+//     height: 100dvh;
+// }
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    position: relative;
+    background-color: $bg-color;
+    width: 100;
+    padding: 0 1.25rem 2rem 1.25rem;
+
+    p {
+        font-size: large;
+        margin-top: -0.3rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        z-index: 1;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        color: $white-100;
+        font-weight: 600;
+    }
+}
+
+.blog {
+    background-color: #FAF9F6;
+}
+
+
+// Do the cool background circles thingy
+.circle-scatter {
+    height: 100%;
     width: 100%;
 
-    .content {
-        min-height: 100dvh;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .blog {
-        flex: 6;
-    }
-    
-    .section-title {
-        font-family: 'Nunito', sans-serif;
-        padding-left: 1rem;
-        font-size: 2rem;
-    }
+    background: url("../assets/circle-scatter.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: absolute;
+
+    inset: auto 0 0 auto;
+    bottom: 0px;
+    margin: 0;
+
+    opacity: 0.3;
+    background-position: top left;
 }
 
