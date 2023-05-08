@@ -7,12 +7,12 @@
 }
 
 .desktop-only {
-	visibility: visible;
+	display: var(--do-display, block);
 }
 
 @media (max-width: 45rem) {
 	.desktop-only {
-		visibility: hidden;
+		display: none;
 	}
 }
 
