@@ -1,82 +1,56 @@
 ---
-title: "So, you're a first year computer scientist."
-pubDate: 2021-09-25
-layout: "../../layouts/BlogPostLayout.astro"
+title: "So you're heading into a CS Degree.."
+firstPublished: 2021-09-25
+lastEdited: 2023-04-12
+author: "Rían Errity"
+summary30: "Various tips for the first-year computer scientist, or those thinking of taking up a degree in computer science or related fields. If you hate listicles you better sit this one out."
 ---
+The IT Industry is a weird one, It is so wide-encompassing with so many avenues to pursue, and often the visible way to land yourself solidly within it is to take up a degree in Computer Science, which is the academic backbone of the industry. 
 
-There are so many things I would have loved to know when I was just starting out studying computer science. 
-I come from a background of computer science, having grown up going to [coderdojo](https://coderdojo.com) and having a programmer
-for a dad, It was only natural I was going to end up somewhere in this general area, in the end I chose not to study pure computer science. 
+The thing is, though, it's also a field that attracts people from all sorts of backgrounds, socioeconomic statuses and education. You don't actually need a degree to succeed — It just makes it an awful lot easier to. 
 
-I study computer science, linguistics and french; therefore I can only really comment on a small subsection of computer science, in Trinity in particular. 
-There is a few common misconceptions I would like to bash out, as well as some general tips for how to attack your first year.
+### 1. Computer Science isn't for the nerdy kids. 
 
-### 1. You don't need the fastest computer or laptop to be a computer scientist 
+Computer Science is one of those fields that has a bit of a stigma around it that only the bright, nerdy kids can succeed. That's not true. In fact, now more than ever we need people with a computer science background in roles that aren't academia or programming. 
 
-In fact, if you really felt like torturing yourself you could get away with only using the computers provided to you by College, in the computer labs as 
-well as the generally available library computers. When purchasing a laptop for computer science you should look for a few key things
-- More than 8GB of Memory
-- A 14" or larger screen which is 1920*1080p 
-- 6h+ of battery life (60-72WH+)
-- A decent CPU/iGPU, something relatively modern.
-Quantifying CPU performance is hard, so I can't give exact things to look out for but most quad/6-core CPUs with a decent base clock should be good enough.
+If you don't fit into the stereotype that doesn't mean you won't enjoy it, or that you won't do very well, the industry has opened up so much to everyone and anyone with a passion for technology.
 
-### 2. You don't need to have prior programming experience.
+If you're not sure about computer science, you could enrol yourself in [CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science?delta=0), a free massively open online course (MOOC) by Harvard which is a well-made pre-computer-science course which I took myself in my first year to reground myself in the basics. 
 
-You will find that the vast majority of your incoming class have no prior programming experience, this is normal! There will be a few who do; and frankly
-they will end up bored out of their tree for those introductory modules which can actually lead to them becoming disengaged/do poorly in them due to not having
-paid attention in class.
+### 2. You don't need to be a computer whizz-kid, or a programming aficionado by September 1st of your first year. 
 
-However, in saying that, try to do as much programming as you can during your first semester -- You want a solid grounding in the principals of programming, and
-how to think in terms of code. You won't be taught programming languages after first year, if a module uses a completely seperate language they will just expect
-you to pick it up yourself overtime, and that's fair enough -- Once you know one language pretty well you shouldn't struggle too much with grasping another. 
+In fact, for a lot of CS students programming doesn't really 'click' until late in the second or even third year of a four-year program, and for others it mightn't at all (Which I'll get to later.) There will be some who do have this experience coming into University, and they will show off (I myself was guilty of this) but you need to ignore them, you're on your own journey, and you have plenty of time to catch up and even exceed their abilities as you progress. 
+  
+### 3. Becoming a lecturer or a Software Developer aren't the only outcomes of a CS Degree
+
+In fact, the entire industry is yearning for more people with a technical background in general, this includes leadership roles such as Program/Product management and Software Engineering management as well as sales, marketing and basically anything you can imagine. Basically every field could use someone with a computer science background right now, it's an amazing stepping stone into doing a Masters or getting into a Ph.D. program in an entirely other field. 
+
+We're among the most sought-after graduates, regardless of any advances in AI might have you believe. 
+  
+### 4. You don't need the fastest computer or laptop to be a computer scientist
+
+You don't want to be the person lugging a 4 kg gaming monstrosity into a lecture hall with fans like a jet turbine. Keep that power for your tower at home, if you even need it at all. Get yourself a decent build-quality generalist computer, get yourself a solid CPU, at least 8 GB of RAM and a battery life that can last 7+ hours to get you through a day of lectures where there might potentially be no sockets in sight. 
+
+The kinds of software you'll be running won't be too intensive, you can even try running some common integrated development environments (IDEs) on what you have currently to see if it'll last you your first few years. This does vary by speciality, though. Doing a lot of 3D modelling/CAD or basic AI and you might want a discrete graphics card, but frankly you won't be touching most of these topics until your 3rd or 4th year, where you might be better off flipping your then 2-plus-year-old machine and upgrading. 
+
+I'd also recommend getting a solid screen and keyboard, if you can check out laptops of your choosing at a local hardware store then do it, just don't buy the machines then and there — Take the model numbers and look online for reviews and to see if there's a better deal online. 
 
 ### 3. The language doesn't matter
 
-This follows on from my last point. Don't get hung up on whatever programming language your intro to programming module uses, you're not really learning the programming
-language, you're learning how to program -- Two completely different tasks. You should try and learn the language through which you're learning to program, but don't 
-worry too much about the syntax/semantics of that particular language too much; just try and get your head around what's going on. Being able to read code and more or 
-less understand it regardless of the language is an invaluable skill. 
+Don't get hung up on whatever programming language your intro to programming module uses, you're not really learning the programming language, you're learning how to program — Two completely different tasks. You should try and learn the language through which you're learning to program, but don't worry too much about the syntax/semantics of that particular language; just try and get your head around what's going on. Being able to read code and more or less understand it regardless of the language is an invaluable skill.
 
-### 4. Office hours / Contact points; Use them!
+### 4. Work on things out of class, and outside the curriculum 
 
-Lectures will tend to have some form of office hours, discussion boards or email which you can use to engage with them over the module material. Making use of this time
-can help you make a good impression with that particular lecturer, and can help you when you go looking for extensions, etc as you will have already built up a rapport with them.
-They can see you're engaging with the material, and are trying your damnest to understand it. 
+The best way to learn to program, and to get better at Computer Science is to apply it to what you already love, build a website to show your love for your favourite sports team, or write a tool that'll help gamers in your favourite video game. Do whatever it takes to make use of your newly acquired skills in something practical.
 
-### 5. Download and archive lecture/module material
+All too often, university programs don't show you the practical implications of what you're learning and focus too much on the theory. If you want to really get the theory and to have a bit of fun with what you're learning, then take a step (or leap!) outside the curriculum and get your hands dirty with code. 
 
-You should make it regular practice to download and maintain offline and local copies of your lectures. If they're pre-recorded or have recordings attached it may also be useful to download
-and store the actual videos themselves, of course don't disseminate those recordings -- that could get you in a world of shit with your particular university, but keeping it locally 
-on an old harddrive might save you if you find out you've failed the module, but they've taken all the lecture material down from the course webpage/VLE when you go to study for the 
-supplimentary examination session.
+### 5. Learn Git. 
 
-### 6. If you have a mentor / tutor in your college, touch base with them!
+No seriously, and try and do it from the command line rather than relying too much on the Git integrations now available in your favourite IDEs or code editors. Try and understand what's going on with Git when you run each command, being able to manage your code effectively and to be able to roll back changes and collaborate will help you early on, don't wait for your university to introduce the topic to you, it's possible they never will — or they'll only do so in a very basic way. 
 
-Some colleges/instititions have a mentorship program whereby students in older years mentor a group of incoming Freshman for their first year, providing them with useful tips/tricks and helping
-them acclimate to college life. In other cases, these mentors might be a member of staff who acts as your advocate in matters where you need to deal with the College. It's vital that your tutor
-knows who you are, what you're doing and that sort of thing before you run into trouble. You don't want your first point of contact with them being knee-deep into a plaigerism case, that's for sure.
+### 6. Check out the Missing Semester
 
-### 7. Don't plaigerise
+Much in the same vein as CS50, take all the courses in the "[Missing Semester](https://missing.csail.mit.edu/)" series in your first year, it covers a bunch of topics broadly that will help you become a better all-rounded developer. The same comes from the fact that it's a semester of topics that all CS programs should teach, but often don't. This is the case for my alma mater, Trinity College, Dublin. 
 
-Following on from that last point; don't plaigerise. This includes pulling code from stack overflow verbaitm, and copying eachothers work. Lecturers see this year after year and they often know the particular
-websites and resources students are using, year after year. They're not stupid -- so you shouldn't treat them like they are. You should be able to justify how you got to your solution entirely from the lecture
-materials or reading list -- If you used an online source be prepared to have to source it. 
-
-### 8. Manage your workload
-
-Lecturers are lazy, they don't have any form of co-ordination as to when they plan things such as Assignments and readings. You will have hell weeks where you have 8,000 words due as well as several coding
-assignments, that's just a fact of life -- particularly in the run up to reading week, or the end of semester. You should anticipate this and plan accordingly. Don't leave lectures unwatched and readings 
-ignored up until the assignments are released. That is how you end up completely overworked and overwhelmed. Pace yourself, avoid burnout and make use of a planner so you can keep track of all of the demands
-of college life.
-
-### 9. Have fun
-
-College is essentially the most free you will ever be, don't be afraid to kick back a few times a month and just be present. Take part in societies, join the student's union -- meet people. You will regret it
-if you don't. Friends made in college have the potential to be friends for life. It's also the time to make all the mistakes that each of us eventually do; know your own limits and know when to say no. 
-
-
-### Closing
-
-I'll probably come back to this list from time to time, re-phrase it and add additional points as I come across them. I know this comes off as very preachy, and the advice I have given is rather generic, but that's
-simply because it needs to be said -- I break and have broken a lot of this over the last year and I fully intend on doing it again. 
+I hope some of these were food for thought at the very least, if you have anything to add or any criticisms to make I'd love to hear them, my contact details are available here on my website. I'd love to hear from you. 
