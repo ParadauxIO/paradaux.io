@@ -1,5 +1,6 @@
 ---
 import RootLayout from "./RootLayout.astro";
+import Footer from "../components/Footer.astro";
 import "./BlogPostLayout.scss"
 
 const { frontmatter } = Astro.props;
@@ -28,4 +29,5 @@ let author = frontmatter.author ?? "Rían Errity"
 			</main>
 		</div>
 	</main>
+	<Footer/>
 </RootLayout>
