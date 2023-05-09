@@ -3,6 +3,7 @@ import RootLayout from "./RootLayout.astro";
 import "./BlogPostLayout.scss"
 
 const { frontmatter } = Astro.props;
+let author = frontmatter.author ?? "Rían Errity"
 ---
 <RootLayout 
 	author={frontmatter.author}
@@ -10,13 +11,21 @@ const { frontmatter } = Astro.props;
 	type={"article"}
 	title={frontmatter.title}
 >
-	<main class="blog-post-page">
-		<h1>
-			{frontmatter.title}
-		</h1>
-	
-		<main >
-			<slot />
-		</main>
+	<main class="blog-post-layout">
+		<div class="blog-post-page">
+			<div class="header">
+				<h1>
+					{frontmatter.title}
+				</h1>
+		
+				<span>
+					By <span>{author}</span> <span></span>
+				</span>
+			</div>
+		
+			<main>
+				<slot />
+			</main>
+		</div>
 	</main>
 </RootLayout>

@@ -1,11 +1,41 @@
+.blog-post-layout {
+    display: flex;
+    flex-direction: column;
+}
+
 .blog-post-page {
-    margin: 0.5rem 0.7rem;
+    max-width: 670px;
+    align-self: center;
+    margin: 1.25rem;
 
     h1 {
+        padding-top: 1.5rem;
         font-size: 1.5rem;
     }
 
     p {
         margin: 0.75rem auto;
+    }
+
+    a {
+        color: #1C2025;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    sup {
+        font-size: 0.7rem;
+
+        a {
+            font-weight: 200;
+        }
+    }
+
+    sup::before {
+        content: '['
+    }
+
+    sup::after {
+        content: ']'
     }
 }
