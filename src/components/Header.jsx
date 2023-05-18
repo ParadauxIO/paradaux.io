@@ -1,5 +1,16 @@
 import { useState } from "react"
 import "./Header.scss"
+import externalLinkIcon from "./ExternalIcon.svg"
+
+function ExternalLink({ link, text }) {
+    return (
+        <a href={link} className="flex">
+            <span className="external-link">
+                {text}<sup><img alt="An Icon to indicate it is an external link." src={externalLinkIcon}/></sup>
+            </span>
+        </a>
+    )
+}
 
 export default function Header() {
     let [navOpen, setNavOpen] = useState(false);
@@ -9,20 +20,20 @@ export default function Header() {
             <h1 className="title">
                 <a href="/">Rían Errity</a>
             </h1>
-    
+
             <button
                 className={"hamburger" + (navOpen ? " is-active" : "")}
                 aria-controls="primary-navigation"
                 aria-expanded={`${navOpen}`}
                 aria-label="Menu"
-                onClick={() => {setNavOpen(prev => !prev)}}
+                onClick={() => { setNavOpen(prev => !prev) }}
             >
-                <div className="bar"/>
+                <div className="bar" />
             </button>
-                
+
             <nav>
-                <ul 
-                    id="primary-navigation" 
+                <ul
+                    id="primary-navigation"
                     className="primary-navigation flex"
                     data-visable={`${navOpen}`}
                 >
@@ -38,14 +49,10 @@ export default function Header() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/r%C3%ADan-errity/">
-                            LinkedIn
-                        </a>
+                        <ExternalLink link="https://www.linkedin.com/in/r%C3%ADan-errity/" text="LinkedIn" />
                     </li>
                     <li>
-                        <a href="mailto:website@paradaux.io">
-                            Email Me
-                        </a>
+                        <ExternalLink link="mailto:website@paradaux.io" text="Email Me" />
                     </li>
                 </ul>
             </nav>

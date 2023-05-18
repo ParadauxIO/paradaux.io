@@ -1,5 +1,12 @@
 $nav-text-color: white;
 
+.external-link {
+    display: flex;
+    img {
+        width: 1rem;
+    }
+}
+
 .primary-header {
     padding: 1rem;
     .title {
