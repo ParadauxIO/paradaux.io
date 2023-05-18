@@ -1,0 +1,7 @@
+---
+import externalLinkIcon from "../assets/ExternalIcon.svg"
+let {link, text} = Astro.props;
+---
+<a href={link} class="no-newline">
+    {text}<img alt="An Icon to indicate it is an external link." src={externalLinkIcon}/>
+</a>

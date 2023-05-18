@@ -1,12 +1,12 @@
 import { useState } from "react"
 import "./Header.scss"
-import externalLinkIcon from "./ExternalIcon.svg"
+import externalLinkIcon from "../assets/ExternalIcon.svg"
 
 function ExternalLink({ link, text }) {
     return (
         <a href={link} className="flex">
             <span className="external-link">
-                {text}<sup><img alt="An Icon to indicate it is an external link." src={externalLinkIcon}/></sup>
+                {text}<img alt="An Icon to indicate it is an external link." src={externalLinkIcon}/>
             </span>
         </a>
     )
@@ -44,9 +44,7 @@ export default function Header() {
                     </li>
 
                     <li>
-                        <a href="/cv.pdf">
-                            C.V
-                        </a>
+                        <ExternalLink link="/cv.pdf" text="C.V" />
                     </li>
                     <li>
                         <ExternalLink link="https://www.linkedin.com/in/r%C3%ADan-errity/" text="LinkedIn" />

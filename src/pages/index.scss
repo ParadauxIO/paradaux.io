@@ -7,6 +7,15 @@ $bg-color: #1C2025;
     display: grid;
     grid-template-columns: 1fr;
     background-color: $bg-color;
+
+    .no-newline {
+        display: inline-flex;
+        img {
+            width: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
 }
 
 .left-bar {
