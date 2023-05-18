@@ -6,7 +6,7 @@
 }
 
 .blog-post-page {
-    max-width: 670px;
+    width: min(85ch, 100% - 4rem);
     align-self: center;
     margin: 1.25rem;
 
