@@ -1,9 +1,11 @@
 ---
 import Header from "../components/Header.jsx";
+import AnalyticsComponent from "../analytics/AnalyticsComponent.jsx"
 import "../styles/fonts.scss";
 import "../styles/reset.scss";
 import "../styles/utilities.scss";
 import '../styles/global.scss';
+import Footer from "../components/Footer.astro";
 
 let { title, author, description, type, url, image } = Astro.props;
 
@@ -34,6 +36,8 @@ image = image ?? "https://paradaux.io/rian-headshot.png"
   </head>
   <body>
     <Header client:load/>
+    <AnalyticsComponent client:only page={Astro.url}/>
     <slot/>
+    <Footer />
   </body>
 </html>

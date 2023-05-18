@@ -4,7 +4,6 @@ import Footer from '../components/Footer.astro';
 import RootLayout from '../layouts/RootLayout.astro';
 import "./index.scss"
 import img from "../assets/rian-headshot.webp"
-
 const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
@@ -53,5 +52,5 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 			}
 		</div>
 </main>
-<Footer />
+
 </RootLayout>

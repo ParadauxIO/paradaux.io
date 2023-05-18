@@ -2,12 +2,8 @@ $white: #E6E9EA;
 $white-100: #bfbfbf;
 $bg-color: #1C2025;
 
-// body {
-//     height: 100dvh;
-// }
-
 .index {
-    height: 100dvh;
+    min-height: 100dvh;
     display: grid;
     grid-template-columns: 1fr;
     background-color: $bg-color;
@@ -28,10 +24,6 @@ $bg-color: #1C2025;
         max-height: 60dvh;
         font-size: 1.5rem;
     }
-
-    .blog {
-        overflow-y: auto;
-    }
 }
 
 .intro {
@@ -40,7 +32,6 @@ $bg-color: #1C2025;
     gap: 1.25rem;
     position: relative;
     padding: 0 1.25rem 2rem 1.25rem;
-
 
     p {
         font-size: large;
