@@ -1,6 +1,6 @@
 ---
 title: "So you're heading into a CS Degree.."
-firstPublished: 2021-09-25
+pubDate: 2021-09-25
 lastEdited: 2023-04-12
 author: "Rían Errity"
 summary30: "Various tips for the first-year computer scientist, or those thinking of taking up a degree in computer science or related fields. If you hate listicles you better sit this one out."
