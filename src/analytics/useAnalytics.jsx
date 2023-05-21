@@ -69,10 +69,12 @@ export default function useAnalytics(page) {
     const mode = import.meta.env.MODE;
     let url, key;
     if (mode == 'development') {
-      url = import.meta.env.PUBLIC_DEV_SUPABASE_URL;
+      url = import.meta.env.PUBLIC_DEV_SUPABASE_URL + "/functions/v1/analytics";
       key = import.meta.env.PUBLIC_DEV_SUPABASE_KEY;
     } else {
-      url = import.meta.env.PUBLIC_PROD_SUPABASE_URL;
+      // For some reason the URL schema changes between public/private.
+      const ref = import.meta.env.PUBLIC_PROD_SUPABASE_REF;
+      url = `https://${ref}.functions.supabase.co/analytics`
       key = import.meta.env.PUBLIC_PROD_SUPABASE_KEY;
     }
 
@@ -86,7 +88,7 @@ export default function useAnalytics(page) {
       redirect: 'follow'
     };
 
-    fetch(`${url}/functions/v1/analytics`, requestOptions)
+    fetch(`${url}`, requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));
