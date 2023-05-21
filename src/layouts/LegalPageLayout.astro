@@ -1,0 +1,36 @@
+---
+import RootLayout from "./RootLayout.astro";
+import Footer from "../components/Footer.astro";
+import "./BlogPostLayout.scss"
+import { toHumanDateString } from "../partials/timeUtils";
+
+const { frontmatter } = Astro.props;
+let author = frontmatter.author ?? "Rían Errity"
+---
+<RootLayout 
+	author={frontmatter.author}
+	description={frontmatter.summary30}
+	type={"article"}
+	title={frontmatter.title}
+>
+	<main class="blog-post-layout">
+		<div class="blog-post-page">
+			<div class="header">
+				<h1>
+					{frontmatter.title}
+				</h1>
+                <div class="blog-suffix-keys">
+                    <span class="bold">First published</span>: {toHumanDateString(frontmatter.pubDate)}
+                </div>
+			</div>
+		
+			<main>
+				<slot />
+			</main>
+
+            <div class="blog-suffix-keys">
+                <span class="bold">Last edited</span>: {toHumanDateString(frontmatter.lastEdited)}
+            </div>
+		</div>
+	</main>
+</RootLayout>
