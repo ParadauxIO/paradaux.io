@@ -1,35 +1,100 @@
 import { v4 as uuidv4 } from 'uuid';
-import config from "./analytics.json"
+import { useEffect } from 'react';
+import { useStore } from '@nanostores/react';
+import { sessionIdAtom } from './store/sessionAtom';
 
-export default function useAnalytics(props) {
-    // console.log(props)
-    // console.log(uuidv4())
-    // sendEvent()
+// Used to generate new session tokens
+const sessionTokenGenerator = () => {
+  let id = uuidv4()
+  let now = new Date();
+  let expires = new Date(now.getTime() + 15 * 60000);
+  let token = { id, expires }
+  sessionIdAtom.set(JSON.stringify(token));
+  return token
+}
 
-    // async function sendEvent() {
-    //     var myHeaders = new Headers();
-    //     myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inlsa3RmdXFka2Z5YmRxdW1pa3FpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY4NDQzMTQzMiwiZXhwIjoyMDAwMDA3NDMyfQ.n1uv2HY4VpKblgzbJl15ITIwh2Y45ABb18M_A1i2mtc");
-    //     myHeaders.append("Content-Type", "application/json");
+// Used to determine if a session token has expired
+const hasSessionTokenExpired = (token) => {
+  return new Date() >= new Date(token.expires);
+}
 
-    //     var raw = JSON.stringify({
-    //         "name": "Rían"
-    //     });
+const isValidTokenString = (tokenStr) => {
+  try {
+    const token = JSON.parse(tokenStr);
+    return !hasSessionTokenExpired(token);
+  } catch (error) {
+    return false
+  }
+}
 
-    //     var requestOptions = {
-    //         method: 'POST',
-    //         headers: myHeaders,
-    //         body: raw,
-    //         redirect: 'follow'
-    //     };
-
-    //     fetch("https://ylktfuqdkfybdqumikqi.functions.supabase.co/analytics", requestOptions)
-    //         .then(response => response.text())
-    //         .then(result => console.log(result))
-    //         .catch(error => console.log('error', error));
-    // }
+export default function useAnalytics(page) {
+  useEffect(() => {
+    let sessionIdValue = sessionIdAtom.get();
 
 
-    return {
+    // Invalid or expired session ID.
+    if (!isValidTokenString(sessionIdValue)) {
+      console.log("[Analytics] Regenerating session token")
+      sessionTokenGenerator();
 
+      // Start event
+      console.log("[Analytics] Sending start event.")
+      sendEvent("session_start", {
+        event_type: "start",
+        id: JSON.parse(sessionIdValue).id,
+        event_message: {
+          initial_page: page.href,
+          origin: page.origin,
+          path: page.path
+        }
+      })
+
+      return;
     }
+
+    // Not the first visited page
+    console.log("[Analytics] Sending view event")
+    sendEvent("session_start", {
+      event_type: "view",
+      id: JSON.parse(sessionIdValue).id,
+      event_message: {
+        initial_page: page.href,
+        origin: page.origin,
+        path: page.path
+      }
+    })
+  }, [])
+
+  async function sendEvent(type, message, value) {
+    const mode = import.meta.env.MODE;
+    let url, key;
+    if (mode == 'development') {
+      url = import.meta.env.PUBLIC_DEV_SUPABASE_URL;
+      key = import.meta.env.PUBLIC_DEV_SUPABASE_KEY;
+    } else {
+      url = import.meta.env.PUBLIC_PROD_SUPABASE_URL;
+      key = import.meta.env.PUBLIC_PROD_SUPABASE_KEY;
+    }
+
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        "Authorization": "Bearer " + key,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(message),
+      redirect: 'follow'
+    };
+
+    fetch(`${url}/functions/v1/analytics`, requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+
+  }
+
+
+  return {
+
+  }
 }
