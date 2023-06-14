@@ -3,6 +3,7 @@ title: "A 'crypto' society is a terrible idea."
 pubDate: 2021-11-10
 layout: "../../layouts/BlogPostLayout.astro"
 summary30: "An email has been ciruclating requesting signatories for a petition to begin a 'crypto' society within Trinity, and I think that's awful."
+type: blog
 ---
 
 I don't think I'm alone in thinking that 'cryptobros' are a plight against our industry. They are coopting existing technologies as theirs

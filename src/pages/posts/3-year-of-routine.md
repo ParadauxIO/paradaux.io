@@ -2,6 +2,7 @@
 title: "In preperation for the year of routine"
 pubDate: 2022-07-01
 layout: "../../layouts/BlogPostLayout.astro"
+type: blog
 ---
 
 # Introduction

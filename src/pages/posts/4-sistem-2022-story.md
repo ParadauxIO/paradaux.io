@@ -2,6 +2,7 @@
 title: "48 hours until air — The SISTEM Story"
 pubDate: 2022-03-07
 layout: "../../layouts/BlogPostLayout.astro"
+type: blog
 ---
 
 ## What is SISTEM?

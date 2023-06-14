@@ -5,6 +5,7 @@ lastEdited: 2023-04-12
 author: "Rían Errity"
 summary30: "Various tips for the first-year computer scientist, or those thinking of taking up a degree in computer science or related fields. If you hate listicles you better sit this one out."
 layout: "../../layouts/BlogPostLayout.astro"
+type: blog
 ---
 The IT Industry is a weird one, It is so wide-encompassing with so many avenues to pursue, and often the visible way to land yourself solidly within it is to take up a degree in Computer Science, which is the academic backbone of the industry. 
 

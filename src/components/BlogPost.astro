@@ -1,11 +1,12 @@
 ---
-let { title, url, summary } = Astro.props;
+let { title, url, summary30, type } = Astro.props;
 import "./BlogPost.scss"
+
 ---
 
 <div class="blog-post">
     <h1>
-        <a href={url}>{title}</a>
+        <span class="type-pill">{type}</span> <a href={url}>{title}</a>
     </h1>
 
     <p>

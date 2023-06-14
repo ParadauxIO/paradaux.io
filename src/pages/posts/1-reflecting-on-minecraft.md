@@ -5,6 +5,7 @@ lastEdited: 2023-04-09
 author: "Rían Errity"
 summary30: "Reflecting on my experience with Minecraft, beginning with learning about Linux and server management, developing a passion for Java and creating plugins for Minecraft servers, which led to jobs and recognition in the community. The skills and experiences I gained were invaluable as I navigate University education and my career."
 layout: "../../layouts/BlogPostLayout.astro"
+type: blog
 ---
 Minecraft was a constant in my life for well over ten years. At the time, it was one of the few popular video games which ran on Linux at all. This was years before the likes of the Steam Deck or Proton. 
 

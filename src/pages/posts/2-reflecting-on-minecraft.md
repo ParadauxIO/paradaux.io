@@ -2,6 +2,7 @@
 title: "A 'crypto' society is a terrible idea."
 pubDate: 2021-11-10
 layout: "../../layouts/BlogPostLayout.astro"
+type: blog
 ---
 
 
