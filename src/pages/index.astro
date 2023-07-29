@@ -40,18 +40,20 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		
 		<div class="blog">
 			<h1 class="blog-title">Posts</h1>
-			{
-				// Get all posts in the /posts directory and map them
-				// to blog post components.
-				allPosts.map((post) => (
-					<BlogPost 
-						url={post.url} 
-						title={post.frontmatter.title} 
-						summary={post.frontmatter.summary30}
-						type={post.frontmatter.type}/>
-					)
-				).reverse()
-			}
+			<div class="blog-posts">
+				{
+					// Get all posts in the /posts directory and map them
+					// to blog post components.
+					allPosts.map((post) => (
+						<BlogPost 
+							url={post.url} 
+							title={post.frontmatter.title} 
+							summary={post.frontmatter.summary30}
+							type={post.frontmatter.type}/>
+						)
+					).reverse()
+				}
+			</div>
 		</div>
 </main>
 

@@ -68,15 +68,19 @@ $bg-color: #1C2025;
 .blog {
     padding-top: 1rem;
     background-color: #FAF9F6;
+}
+
+.blog-title {
+    padding-left: 1rem;
+    padding-bottom: 0;
+}
+
+.blog-posts {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-
-    padding: 1rem;
-
-    .blog-title {
-        padding-left: 1rem;
-    }
+    padding: 1.0rem;
+    padding-top: 0;
 }
 
 
