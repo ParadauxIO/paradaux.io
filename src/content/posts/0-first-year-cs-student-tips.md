@@ -1,5 +1,5 @@
 ---
-title: "So you're heading into a CS Degree.."
+title: "So, you're thinking of studying computer science?"
 firstPublished: 2021-09-25
 lastEdited: 2023-04-12
 author: "Rían Errity"
