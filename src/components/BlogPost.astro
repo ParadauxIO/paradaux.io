@@ -1,7 +1,10 @@
 ---
-let { title, url, summary30, type } = Astro.props;
+import {format} from 'date-fns'; 
+let { title, url, summary, type, date, firstPublished } = Astro.props;
 import "./BlogPost.scss"
 
+console.log(typeof(firstPublished))
+const formattedTime = format(new Date(firstPublished), 'MMMM eo, yyyy');
 ---
 
 <div class="blog-post">
@@ -9,9 +12,9 @@ import "./BlogPost.scss"
         <span class="type-pill">{type}</span> <a href={url}>{title}</a>
     </h1>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iusto ipsum suscipit aspernatur labore tenetur dolorum alias dolorem sint quaerat. Alias rerum obcaecati doloremque consequuntur suscipit exercitationem impedit expedita nemo.
+    <p class="summary">
+        {summary}
     </p>
-
-    <a href={url}>Read more...</a>
+    <span class="time"><strong>Published</strong>: {formattedTime}</span> 
+    <a class="button" href={url}>Read more...</a> 
 </div>

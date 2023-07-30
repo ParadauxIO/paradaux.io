@@ -83,6 +83,16 @@ $bg-color: #1C2025;
     padding-top: 0;
 }
 
+.aside {
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 12px;
+}
+
+.warn {
+    background-color: #faedcd;
+}
+
 
 // Do the cool background circles thingy
 .circle-scatter {

@@ -1,9 +1,9 @@
 ---
 title: "Reflecting on Minecraft"
-pubDate: 2021-10-29
+firstPublished: 2021-10-29
 lastEdited: 2023-04-09
 author: "Rían Errity"
-summary30: "Reflecting on my experience with Minecraft, beginning with learning about Linux and server management, developing a passion for Java and creating plugins for Minecraft servers, which led to jobs and recognition in the community. The skills and experiences I gained were invaluable as I navigate University education and my career."
+summary: "Reflecting on my experience with Minecraft, beginning with learning about Linux and server management, developing a passion for Java and creating plugins for Minecraft servers, which led to jobs and recognition in the community. The skills and experiences I gained were invaluable as I navigate University education and my career."
 layout: "../../layouts/BlogPostLayout.astro"
 type: blog
 ---

@@ -41,6 +41,9 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 		<div class="blog">
 			<h1 class="blog-title">Posts</h1>
 			<div class="blog-posts">
+				<div class="aside warn">
+					⚠️ A few articles are currently missing as they are being updated and moved to the new format, I hope you like the new design !
+				</div>
 				{
 					// Get all posts in the /posts directory and map them
 					// to blog post components.
@@ -48,8 +51,10 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 						<BlogPost 
 							url={post.url} 
 							title={post.frontmatter.title} 
-							summary={post.frontmatter.summary30}
-							type={post.frontmatter.type}/>
+							summary={post.frontmatter.summary}
+							type={post.frontmatter.type}
+							firstPublished={post.frontmatter.firstPublished}
+						/>
 						)
 					).reverse()
 				}
