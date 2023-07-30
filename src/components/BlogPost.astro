@@ -1,9 +1,8 @@
 ---
 import {format} from 'date-fns'; 
-let { title, url, summary, type, date, firstPublished } = Astro.props;
+let { title, url, summary, type, firstPublished } = Astro.props;
 import "./BlogPost.scss"
 
-console.log(typeof(firstPublished))
 const formattedTime = format(new Date(firstPublished), 'MMMM eo, yyyy');
 ---
 
