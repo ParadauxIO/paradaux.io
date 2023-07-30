@@ -1,11 +1,19 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
-export async function get() {
+export async function get(context) {
+  const posts = await getCollection('posts');
   return rss({
     title: 'Rían Errity | Paradaux.io',
-    description: 'Blog posts, articles and tutorials written by Rían Errity on the topics of Software Development, Linguistics and Startups.',
-    site: 'https://paradaux.io',
-    items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
-    customData: `<language>en-us</language>`,
+    description: 'Various tutorials, comments and ramblings about certain things.',
+    site: context.site,
+    items: posts.map(post => (
+      {
+        title: post.data.title,
+        pubDate: post.data.firstPublished,
+        description: post.data.summary,
+        link: `/posts/${post.slug}/`,
+      }
+    )),
   });
 }
