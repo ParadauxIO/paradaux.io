@@ -1,11 +1,13 @@
 ---
 import RootLayout from "./RootLayout.astro";
-import Footer from "../components/Footer.astro";
 import "./BlogPostLayout.scss"
-import { toHumanDateString } from "../partials/timeUtils";
+import { format } from "date-fns";
 
 const { frontmatter } = Astro.props;
 let author = frontmatter.author ?? "Rían Errity"
+
+const firstPublished = format(new Date(frontmatter.firstPublished), 'MMMM eo, yyyy');
+const lastEdited = format(new Date(frontmatter.lastEdited), 'MMMM eo, yyyy');
 ---
 <RootLayout 
 	author={frontmatter.author}
@@ -20,7 +22,7 @@ let author = frontmatter.author ?? "Rían Errity"
 					{frontmatter.title}
 				</h1>
                 <div class="blog-suffix-keys">
-                    <span class="bold">First published</span>: {toHumanDateString(frontmatter.pubDate)}
+                    <span class="bold">First published</span>: {firstPublished}
                 </div>
 			</div>
 		
@@ -29,7 +31,7 @@ let author = frontmatter.author ?? "Rían Errity"
 			</main>
 
             <div class="blog-suffix-keys">
-                <span class="bold">Last edited</span>: {toHumanDateString(frontmatter.lastEdited)}
+                <span class="bold">Last edited</span>: {lastEdited}
             </div>
 		</div>
 	</main>

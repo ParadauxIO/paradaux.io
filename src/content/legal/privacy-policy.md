@@ -1,9 +1,8 @@
 ---
 title: "Privacy Policy for paradaux.io"
-pubDate: 2023-05-21
+firstPublished: 2023-05-21
 lastEdited: 2023-05-21
 author: "Rían Errity"
-summary30: "Various tips for the first-year computer scientist, or those thinking of taking up a degree in computer science or related fields. If you hate listicles you better sit this one out."
 layout: "../../layouts/LegalPageLayout.astro"
 ---
 
