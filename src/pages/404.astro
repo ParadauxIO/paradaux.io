@@ -1,0 +1,16 @@
+---
+
+import RootLayout from '../layouts/RootLayout.astro';
+import "./404.scss"
+import notFoundImage from "../assets/not-found.svg"
+---
+
+<RootLayout title="Home">
+    <div class="not-found-container">
+        <div class="content">
+            <h1>404: Not found</h1>
+            <p>The page you are looking for is missing or does not exist.</p>
+            <img src={notFoundImage}/>
+        </div>
+    </div>
+</RootLayout>
