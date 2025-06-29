@@ -1,0 +1,104 @@
+---
+import { getAge } from '../utils/time.ts';
+
+let age = getAge(new Date(2002, 4, 13));
+---
+
+<div id="container">
+	<div class="hero">
+		<div class="hero-content">
+			<h1 class="hero-title">Full-Stack Developer</h1>
+			<p class="hero-subtitle">
+				Hi there! I'm Rían<sup id="footnote-ref-1">1</sup>, a Software Developer from Ireland.
+			</p>
+			<p>
+				I'm a {age}-year-old Software Developer from Ireland, currently working at JPMorganChase as a Software Engineer,
+				currently based in Dublin, working within Global Fund Services Technology. I'm interested in building scalable,
+				maintainable and modern full-stack applications.
+			</p>
+			<p>
+				My background is in Computational Linguistics, which is the intersection of computer science and human language.
+				I've worked on many things and projects over the years, including an internship at Microsoft, where I worked on
+				Azure Communication Services, a constituent part of Microsoft Teams, and as a Software Engineer in Research at
+				Trinity College Dublin, where I worked on Irish speech technology as part of the ABAIR project.
+			</p>
+			<p>
+				I'm interested in working with Irish non-profit organisations to help them streamline their operations, and to
+				that end I'm willing to offer my services for free to any such organisation. If you are interested, please get in touch
+				using the form below.
+			</p>
+
+			<footer class="footnotes">
+				<hr />
+				<p id="footnote-1"><sup>1</sup> Pronounced "Ree-yin" or "Ree-an".</p>
+			</footer>
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	#container {
+		padding: 2rem 1rem;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.hero-content {
+		text-align: center;
+		margin-inline: auto;
+		padding-inline: 1rem;
+	}
+
+	.hero-title {
+		font-weight: 700;
+		letter-spacing: -0.025em;
+		margin-bottom: 1.5rem;
+		font-size: 2.25rem;
+		line-height: 1.1;
+	}
+
+	@media (min-width: 768px) {
+		.hero-title {
+			font-size: 3.75rem;
+		}
+	}
+
+	.hero-subtitle {
+		font-size: 1.25rem;
+		color: #6b7280;
+		max-width: 42rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.6;
+		margin-bottom: 1.25rem;
+		max-width: 42rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	sup {
+		font-size: 0.75rem;
+		vertical-align: super;
+		cursor: help;
+	}
+
+	.footnotes {
+		max-width: 42rem;
+		margin: 2rem auto 0;
+		font-size: 0.875rem;
+		color: #6b7280;
+		text-align: left;
+	}
+
+	.footnotes hr {
+		border: none;
+		border-top: 1px solid #d1d5db;
+		margin-bottom: 0.75rem;
+	}
+</style>

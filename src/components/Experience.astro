@@ -1,0 +1,230 @@
+---
+import awsBadge from '../assets/badges/aws-certified-developer-associate.png';
+import terraformBadge from '../assets/badges/hashicorp-certified-terraform-associate-003.png';
+import {getTimeSinceString} from "../utils/time";
+
+const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
+
+---
+<main class="main-content">
+    <section class="section">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="job-title">Software Engineer</div>
+                    <div class="company">JPMorganChase, Dublin, Ireland</div>
+                </div>
+                <div class="duration">09/2024 — Present ({timeSinceJoinedJpmorgan})</div>
+            </div>
+            <ul>
+                <li>
+                    Delivered a new API and Data Access Layer enabling a platform to access on-premises data warehouses
+                    from the public cloud (AWS) within the Transfer Agency Business.
+                </li>
+                <li>
+                    Designed and implemented brand-new cloud infrastructure using Terraform, ensuring a complete repave of production is simple and replicable.
+                </li>
+                <li>
+                    Leading the adoption of Artificial Intelligence within Transfer Agency Technology, with the development of org-specific developer tooling.
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="job-title">Software Engineer</div>
+                    <div class="company">ABAIR.ie, Trinity College, Dublin, Ireland</div>
+                </div>
+                <div class="duration">06/2022 – 08/2024 (2 years)</div>
+            </div>
+            <ul>
+                <li>Developed mobile applications in React Native, Node.JS/PostgreSQL.</li>
+                <li>Managed and deployed new bare-metal infrastructure, implemented DevOps processes using Github Actions CI/CD,
+                    Github Projects/Issues and Agile methodologies.
+                </li>
+                <li>Developed Geabaire, an alternative and augmentative communication tool for Irish.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="job-title">Software Engineering Intern</div>
+                    <div class="company">Microsoft, Tallinn, Estonia</div>
+                </div>
+                <div class="duration">06/2022 – 09/2022 (3 months)</div>
+            </div>
+            <ul>
+                <li>Worked on Azure Communication Services, a service for providing telephony services via API, as part
+                    of the backend of Microsoft Teams/Skype for Business.
+                </li>
+                <li>
+                    Worked on developing a suite of synthetic tests to ensure the reliability of the service, as well as
+                    making requisite changes to the service to ensure it was compatible with the tests.
+                </li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="job-title">Programming Tutor</div>
+                    <div class="company">Olus Education, Remote, Ireland</div>
+                </div>
+                <div class="duration">03/2021 – 06/2023 (2 years)</div>
+            </div>
+            <ul>
+                <li>
+                    Taught evening and summer classes to hundreds of students aged between 7 - 18 across various subjects including Java,
+                    web development and Scratch.
+                </li>
+                <li>
+                    Developed new content for the older students, including Object-Oriented Programming and Arm assembly
+                    language.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Certificates</h2>
+
+        <div class="award-item">
+            <div class="award-content">
+                <div class="award-title">AWS Certified Developer — Associate</div>
+                <p>
+                    I have passed the AWS Certified Developer — Associate exam which highlights my ability to design, develop
+                    and maintain applications across over 40 AWS services, including EKS, ECS, Lambda, DynamoDB and S3.
+            </div>
+            <div class="award-badge">
+                <a href="https://www.credly.com/badges/616f06cd-5c3c-4a5c-a845-0bf364c3faab/public_url" target="_blank">
+                    <img src={awsBadge.src} alt="AWS Developer Associate Badge">
+                </a>
+            </div>
+        </div>
+
+        <div class="award-item">
+            <div class="award-content">
+                <div class="award-title">HashiCorp Certified: Terraform Associate (003)</div>
+                <p>
+                    I have passed the HashiCorp Certified: Terraform Associate exam which ensures I have the skills recreated
+                    to manage infrastructure as code using Terraform, including the ability to create, manage, and deploy cloud infrastructure across providers.
+                </p>
+            </div>
+            <div class="award-badge">
+                <a href="https://www.credly.com/badges/f60d9a60-1318-4ab4-831f-8333c5e94e27/public_url" target="_blank">
+                    <img src={terraformBadge.src} alt="Hashicorp Terraform Associate Badge">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style lang="scss">
+  .main-content {
+    padding: 1rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section h2 {
+    color: #36454F;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #36454F;
+  }
+
+  .experience-item, .project-item, .award-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #36454F;
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .job-title, .award-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+  }
+
+  .company {
+    color: rgba(54, 69, 79, 0.91);
+    font-weight: 500;
+  }
+
+  .duration {
+    color: #6c757d;
+    font-size: 0.9rem;
+  }
+
+  .experience-item ul {
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+
+  .experience-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .experience-item li::before {
+    content: "▸";
+    color: rgba(54, 69, 79, 0.91);
+    position: absolute;
+    left: 0;
+  }
+
+  .award-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .award-content {
+    flex: 1;
+  }
+
+  .award-badge {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .experience-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
