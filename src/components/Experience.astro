@@ -7,7 +7,7 @@ const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
 
 ---
 <main class="main-content">
-    <section class="section">
+    <section class="section" id="experience">
         <h2>Experience</h2>
         <div class="experience-item">
             <div class="experience-header">
@@ -225,6 +225,34 @@ const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
     .experience-header {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 1043px) {
+    .award-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    .award-content {
+      text-align: center;
+    }
+
+    .award-badge img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .award-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .award-content p {
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
   }
 </style>
