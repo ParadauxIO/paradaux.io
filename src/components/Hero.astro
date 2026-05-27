@@ -1,7 +1,4 @@
 ---
-import { getAge } from '../utils/time.ts';
-
-let age = getAge(new Date(2002, 4, 13));
 ---
 
 <div id="container">
@@ -12,20 +9,14 @@ let age = getAge(new Date(2002, 4, 13));
 				Hi there! I'm Rían<sup id="footnote-ref-1">1</sup>, a Software Developer from Ireland.
 			</p>
 			<p>
-				I'm a {age}-year-old Software Developer from Ireland, currently working at JPMorganChase as a Software Engineer,
-				currently based in Dublin, working within Global Fund Services Technology. I'm interested in building scalable,
-				maintainable and modern full-stack applications.
+				I'm a Software Developer from Ireland, currently working at Solidroad as a Software Engineer. I'm interested in
+				building scalable, maintainable and modern full-stack applications.
 			</p>
 			<p>
 				My background is in Computational Linguistics, which is the intersection of computer science and human language.
 				I've worked on many things and projects over the years, including an internship at Microsoft, where I worked on
 				Azure Communication Services, a constituent part of Microsoft Teams, and as a Software Engineer in Research at
 				Trinity College Dublin, where I worked on Irish speech technology as part of the ABAIR project.
-			</p>
-			<p>
-				I'm interested in working with Irish non-profit organisations to help them streamline their operations, and to
-				that end I'm willing to offer my services for free to any such organisation. If you are interested, please get in touch
-				using the form below.
 			</p>
 
 			<footer class="footnotes">
@@ -65,7 +56,7 @@ let age = getAge(new Date(2002, 4, 13));
 
 	.hero-subtitle {
 		font-size: 1.25rem;
-		color: #6b7280;
+		color: var(--text-muted);
 		max-width: 42rem;
 		margin-left: auto;
 		margin-right: auto;
@@ -92,13 +83,13 @@ let age = getAge(new Date(2002, 4, 13));
 		max-width: 42rem;
 		margin: 2rem auto 0;
 		font-size: 0.875rem;
-		color: #6b7280;
+		color: var(--text-muted);
 		text-align: left;
 	}
 
 	.footnotes hr {
 		border: none;
-		border-top: 1px solid #d1d5db;
+		border-top: 1px solid var(--border);
 		margin-bottom: 0.75rem;
 	}
 </style>

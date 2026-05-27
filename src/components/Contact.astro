@@ -106,11 +106,13 @@ const TURNSTILE_SITE_KEY = '0x4AAAAAABi05LMDUHvIaiaF';
   }
 
   .section h2 {
-    color: #36454F;
+    color: var(--heading);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #36454F;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
   }
 
   .contact-container {
@@ -122,13 +124,13 @@ const TURNSTILE_SITE_KEY = '0x4AAAAAABi05LMDUHvIaiaF';
 
   .contact-info {
     h3 {
-      color: #36454F;
+      color: var(--heading);
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
 
     p {
-      color: #6c757d;
+      color: var(--text-muted);
       margin-bottom: 2rem;
       line-height: 1.6;
     }
@@ -144,27 +146,28 @@ const TURNSTILE_SITE_KEY = '0x4AAAAAABi05LMDUHvIaiaF';
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #36454F;
+    color: var(--heading);
 
     svg {
       flex-shrink: 0;
     }
 
     a {
-      color: #36454F;
+      color: var(--accent);
       text-decoration: none;
+      transition: color 0.15s ease;
 
       &:hover {
-        text-decoration: underline;
+        color: var(--accent-hover);
       }
     }
   }
 
   .contact-form {
-    background: #f8f9fa;
+    background: var(--bg-subtle);
     padding: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid #36454F;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
   }
 
   .form-group {
@@ -173,25 +176,28 @@ const TURNSTILE_SITE_KEY = '0x4AAAAAABi05LMDUHvIaiaF';
     label {
       display: block;
       margin-bottom: 0.5rem;
-      color: #36454F;
+      color: var(--heading);
       font-weight: 500;
     }
 
     input, textarea {
       width: 100%;
       padding: 0.75rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+      border: 1px solid #d6dae1;
+      border-radius: 8px;
       font-size: 1rem;
-      transition: border-color 0.2s ease;
+      font-family: inherit;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
 
       &:focus {
         outline: none;
-        border-color: #36454F;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
       }
 
-      &:required:invalid {
+      &:user-invalid {
         border-color: #dc3545;
+        box-shadow: 0 0 0 3px color-mix(in srgb, #dc3545 14%, transparent);
       }
     }
 
@@ -206,21 +212,26 @@ const TURNSTILE_SITE_KEY = '0x4AAAAAABi05LMDUHvIaiaF';
   }
 
   .submit-button {
-    background: #36454F;
+    background: var(--accent);
     color: white;
     border: none;
     padding: 0.75rem 2rem;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: inherit;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
 
     &:hover:not(:disabled) {
-      background: #2a3640;
+      background: var(--accent-hover);
+    }
+
+    &:active:not(:disabled) {
+      transform: translateY(1px);
     }
 
     &:disabled {

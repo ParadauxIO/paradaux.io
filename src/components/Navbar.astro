@@ -13,7 +13,7 @@
 
 <style lang="scss">
   .header {
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border);
   }
 
   .container {
@@ -46,9 +46,10 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    transition: color 0.15s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--accent);
     }
   }
 </style>

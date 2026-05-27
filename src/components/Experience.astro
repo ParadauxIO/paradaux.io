@@ -3,7 +3,7 @@ import awsBadge from '../assets/badges/aws-certified-developer-associate.png';
 import terraformBadge from '../assets/badges/hashicorp-certified-terraform-associate-003.png';
 import {getTimeSinceString} from "../utils/time";
 
-const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
+const timeAtSolidroad = getTimeSinceString(new Date(2026, 3, 1));
 
 ---
 <main class="main-content">
@@ -13,9 +13,22 @@ const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
             <div class="experience-header">
                 <div>
                     <div class="job-title">Software Engineer</div>
+                    <div class="company">Solidroad</div>
+                </div>
+                <div class="duration">04/2026 — Present ({timeAtSolidroad})</div>
+            </div>
+            <ul>
+                <li>Working on making CX teams more effective and more aware of their agents — human or AI.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <div class="job-title">Software Engineer</div>
                     <div class="company">JPMorganChase, Dublin, Ireland</div>
                 </div>
-                <div class="duration">09/2024 — Present ({timeSinceJoinedJpmorgan})</div>
+                <div class="duration">09/2024 — 04/2026 (1 year 7 months)</div>
             </div>
             <ul>
                 <li>
@@ -150,19 +163,26 @@ const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
   }
 
   .section h2 {
-    color: #36454F;
+    color: var(--heading);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #36454F;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
   }
 
   .experience-item, .project-item, .award-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #36454F;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1.75rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s ease;
+  }
+
+  .experience-item:hover, .award-item:hover {
+    border-color: color-mix(in srgb, var(--accent) 22%, var(--border));
   }
 
   .experience-header {
@@ -175,7 +195,7 @@ const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
 
   .job-title, .award-title {
     font-weight: 600;
-    color: #333;
+    color: var(--heading);
     font-size: 1.1rem;
   }
 
@@ -201,10 +221,13 @@ const timeSinceJoinedJpmorgan = getTimeSinceString(new Date(2024, 8, 1));
   }
 
   .experience-item li::before {
-    content: "▸";
-    color: rgba(54, 69, 79, 0.91);
+    content: "▶";
+    color: var(--accent);
+    font-size: 0.7rem;
+    line-height: 1.6rem;
     position: absolute;
     left: 0;
+    top: 0;
   }
 
   .award-item {
