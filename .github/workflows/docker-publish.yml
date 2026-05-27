@@ -1,0 +1,57 @@
+name: Build and Push Docker Image to Harbor
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Compute tags
+        id: tags
+        run: |
+          # Env-prefixed immutable tag — Argo CD Image Updater watches
+          # `<env>-sha-<short>` per overlay. Prefix MUST match the kustomize
+          # overlay directory name (development / production). Mutable tag
+          # kept for transition / manual rollbacks.
+          SHORT_SHA=${GITHUB_SHA::7}
+          if [ "${{ github.ref_name }}" == "main" ]; then
+            ENV_NAME=production
+            MUTABLE=prod
+          elif [ "${{ github.ref_name }}" == "develop" ]; then
+            ENV_NAME=development
+            MUTABLE=latest
+          else
+            echo "Unsupported branch: ${{ github.ref_name }}"
+            exit 1
+          fi
+          echo "SHA_TAG=${ENV_NAME}-sha-${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+          echo "MUTABLE_TAG=${MUTABLE}" >> "$GITHUB_OUTPUT"
+
+      - name: Log in to Harbor registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.HARBOR_REGISTRY }}
+          username: ${{ secrets.HARBOR_USERNAME }}
+          password: ${{ secrets.HARBOR_PASSWORD }}
+
+      - name: Build Docker image
+        run: |
+          IMAGE=${{ secrets.HARBOR_REGISTRY }}/paradaux-public/paradaux-io
+          docker build \
+            -t "${IMAGE}:${{ steps.tags.outputs.SHA_TAG }}" \
+            -t "${IMAGE}:${{ steps.tags.outputs.MUTABLE_TAG }}" \
+            .
+
+      - name: Push Docker image
+        run: |
+          IMAGE=${{ secrets.HARBOR_REGISTRY }}/paradaux-public/paradaux-io
+          docker push "${IMAGE}:${{ steps.tags.outputs.SHA_TAG }}"
+          docker push "${IMAGE}:${{ steps.tags.outputs.MUTABLE_TAG }}"
