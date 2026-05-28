@@ -1,0 +1,12 @@
+.git
+.github
+.gitignore
+.astro
+dist
+node_modules
+.vscode
+.idea
+*.log
+README.md
+.env
+.env.*
