@@ -30,7 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('https://api.paradaux.io/api/contact', {
+            // Baked in at build time by Vite. Dockerfile takes PUBLIC_API_BASE_URL
+            // as a build arg; GHA passes api.dev.paradaux.io on develop and the
+            // prod api on main. Fallback to prod is a safety net.
+            const apiBase = import.meta.env.PUBLIC_API_BASE_URL || 'https://api.paradaux.io';
+            const response = await fetch(`${apiBase}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

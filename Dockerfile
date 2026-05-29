@@ -11,6 +11,11 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# PUBLIC_API_BASE_URL is baked into the static output by Vite at build time
+# (consumed in src/utils/contact.js via import.meta.env). GHA sets it per
+# branch — api.dev.paradaux.io on develop, api.paradaux.io on main.
+ARG PUBLIC_API_BASE_URL
+ENV PUBLIC_API_BASE_URL=$PUBLIC_API_BASE_URL
 RUN npm run build
 
 # ── Stage 3: nginx serving the static output ─────────────────────────────────
