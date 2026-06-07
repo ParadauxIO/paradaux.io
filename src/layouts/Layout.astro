@@ -14,6 +14,9 @@ import Navbar from "../components/Navbar.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Rían Errity | paradaux.io</title>
 		<script defer src="https://umami.paradaux.io/script.js" data-website-id="13b71882-f229-4aae-8534-f1f22419d91b"></script>
+		<!-- Grafana Faro RUM (web-vitals + JS errors) → faro.paradaux.io -->
+		<script is:inline defer src="https://cdn.jsdelivr.net/npm/@grafana/faro-web-sdk@2.7.1/dist/bundle/faro-web-sdk.iife.js" crossorigin="anonymous"></script>
+		<script is:inline>(function w(){var F=window.GrafanaFaroWebSdk;if(!F)return setTimeout(w,50);F.initializeFaro({url:"https://faro.paradaux.io/collect",app:{name:"paradaux-io",environment:"production"},instrumentations:F.getWebInstrumentations()});})();</script>
 	</head>
 	<body>
 		<Navbar/>
