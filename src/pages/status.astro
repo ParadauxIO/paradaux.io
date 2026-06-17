@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+// Grafana PUBLIC dashboard embed URL (uid "uptime", served by
+// grafana.paradaux.io). It's a public-share link, so no login is required.
+// Set PUBLIC_STATUS_EMBED_URL at build time (Vite env / Dockerfile build-arg)
+// or paste the share URL here once the dashboard is shared as public:
+//   https://grafana.paradaux.io/public-dashboards/<token>
+const STATUS_EMBED_URL =
+    import.meta.env.PUBLIC_STATUS_EMBED_URL || '';
+
+const services = [
+    { name: "paradaux.io", blurb: "This site — static Astro, served from the cluster.", href: "https://paradaux.io" },
+    { name: "api.paradaux.io", blurb: "The backend API behind the contact form and the joke sites.", href: "https://api.paradaux.io" },
+    { name: "Democracycraft Economy", blurb: "The Treasury economy explorer for Democracycraft.", href: "https://economy.democracycraft.net" },
+    { name: "bytebin", blurb: "Paste / content-hosting service.", href: "https://pastes.paradaux.io" },
+    { name: "Tesks", blurb: "Task-management API (Discord bot + MCP).", href: "https://tesks.paradaux.io" }
+];
+---
+
+<Layout>
+    <main class="main-content">
+        <section class="section" id="status">
+            <h2>Status</h2>
+            <p>Live availability of the services I run, probed once a minute from inside the cluster. Powered by Prometheus blackbox probes and Grafana.</p>
+
+            {STATUS_EMBED_URL ? (
+                <div class="status-embed">
+                    <iframe
+                        src={STATUS_EMBED_URL}
+                        title="Public status dashboard"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            ) : (
+                <div class="status-pending">
+                    <strong>Live status board is being provisioned.</strong>
+                    <span>The blackbox probes and Grafana dashboard are deploying; the embedded board will appear here once the public dashboard is shared.</span>
+                </div>
+            )}
+
+            <h3 class="services-heading">Monitored services</h3>
+            <div class="services-list">
+                {services.map((s) => (
+                    <a href={s.href} target="_blank" rel="noopener noreferrer" class="service-row">
+                        <span class="service-dot" aria-hidden="true"></span>
+                        <span class="service-text">
+                            <span class="service-name">{s.name}</span>
+                            <span class="service-blurb">{s.blurb}</span>
+                        </span>
+                    </a>
+                ))}
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<style lang="scss">
+  .main-content {
+    padding: 2rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section h2 {
+    color: var(--heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+
+  .section > p {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+  }
+
+  .status-embed {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--bg-subtle);
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 620px;
+      border: 0;
+    }
+  }
+
+  .status-pending {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.5rem;
+    background: var(--bg-subtle);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+
+    strong { color: var(--heading); }
+  }
+
+  .services-heading {
+    color: var(--heading);
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .service-row {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1.1rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--heading);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+      transform: translateY(-1px);
+      color: var(--heading);
+    }
+  }
+
+  .service-dot {
+    flex-shrink: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+  }
+
+  .service-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .service-name {
+    font-weight: 600;
+  }
+
+  .service-blurb {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .status-embed iframe { height: 520px; }
+  }
+</style>
