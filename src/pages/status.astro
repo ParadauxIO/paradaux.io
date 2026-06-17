@@ -8,7 +8,8 @@ import Footer from '../components/Footer.astro';
 // or paste the share URL here once the dashboard is shared as public:
 //   https://grafana.paradaux.io/public-dashboards/<token>
 const STATUS_EMBED_URL =
-    import.meta.env.PUBLIC_STATUS_EMBED_URL || '';
+    import.meta.env.PUBLIC_STATUS_EMBED_URL ||
+    'https://grafana.paradaux.io/public-dashboards/2fcdd1d008a143088403f9a23922c7e9?theme=light';
 
 const services = [
     { name: "paradaux.io", blurb: "This site — static Astro, served from the cluster.", href: "https://paradaux.io" },
