@@ -43,12 +43,22 @@ const projects = [
         }
     },
     {
-        title: "Treasury",
-        description: "A double-entry bookkeeping game economy system.",
+        title: "Democracycraft Economy",
+        description: "The economic backbone of the Democracycraft Minecraft server. Treasury is a double-entry bookkeeping engine that settles every in-game transaction, sitting alongside a business and payroll system. The public economy explorer surfaces balances, businesses and live transaction volume.",
         image: null,
-        technologies: ["unreleased", "spring", "mariadb", "kubernetes"],
+        technologies: ["Spring Boot", "MariaDB", "Kubernetes", "Prometheus"],
         links: {
             github: null,
+            live: "https://economy.democracycraft.net"
+        }
+    },
+    {
+        title: "Tesks",
+        description: "A task-management suite for Democracycraft: a Discord-integrated Java bot that uses LLM triage to turn conversations into tracked tasks (and exposes them over an MCP server), paired with an authenticated Next.js management UI.",
+        image: null,
+        technologies: ["Java 21", "Spring Boot", "Next.js", "PostgreSQL", "MCP"],
+        links: {
+            github: "https://github.com/ParadauxIO/tesks",
             live: null
         }
     },
