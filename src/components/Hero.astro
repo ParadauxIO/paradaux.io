@@ -2,94 +2,153 @@
 ---
 
 <div id="container">
-	<div class="hero">
-		<div class="hero-content">
-			<h1 class="hero-title">Full-Stack Developer</h1>
-			<p class="hero-subtitle">
-				Hi there! I'm Rían<sup id="footnote-ref-1">1</sup>, a Software Developer from Ireland.
-			</p>
+	<section class="hero">
+		<p class="eyebrow">
+			<span class="status-dot"></span>
+			Software Engineer · Ireland
+		</p>
+		<h1 class="hero-title">Full-Stack Developer</h1>
+		<p class="hero-lead">
+			Hi there! I'm Rían<sup id="footnote-ref-1">1</sup>, a Software Developer from Ireland.
+		</p>
+		<div class="hero-body">
 			<p>
-				I'm a Software Developer from Ireland, currently working at Solidroad as a Software Engineer. I'm interested in
+				I'm currently working at Solidroad as a Software Engineer. I'm interested in
 				building scalable, maintainable and modern full-stack applications.
 			</p>
 			<p>
-				My background is in Computational Linguistics, which is the intersection of computer science and human language.
-				I've worked on many things and projects over the years, including an internship at Microsoft, where I worked on
-				Azure Communication Services, a constituent part of Microsoft Teams, and as a Software Engineer in Research at
-				Trinity College Dublin, where I worked on Irish speech technology as part of the ABAIR project.
+				My background is in Computational Linguistics — the intersection of computer science
+				and human language. Over the years I've interned at Microsoft on Azure Communication
+				Services (part of Microsoft Teams), and worked as a Software Engineer in Research at
+				Trinity College Dublin on Irish speech technology as part of the ABAIR project.
 			</p>
-
-			<footer class="footnotes">
-				<hr />
-				<p id="footnote-1"><sup>1</sup> Pronounced "Ree-yin" or "Ree-an".</p>
-			</footer>
 		</div>
-	</div>
+
+		<div class="hero-actions">
+			<a class="btn btn-primary" href="/cv.pdf">Download CV</a>
+			<a class="btn" href="https://github.com/ParadauxIO" target="_blank" rel="noopener noreferrer">GitHub</a>
+			<a class="btn" href="/#contact">Get in touch</a>
+		</div>
+
+		<footer class="footnotes">
+			<p id="footnote-1"><sup>1</sup> Pronounced "Ree-yin" or "Ree-an".</p>
+		</footer>
+	</section>
 </div>
 
 <style lang="scss">
 	#container {
-		padding: 2rem 1rem;
+		padding: 4rem 2rem 2rem;
 		max-width: 900px;
 		margin: 0 auto;
 	}
 
-	.hero-content {
-		text-align: center;
-		margin-inline: auto;
-		padding-inline: 1rem;
+	.hero {
+		max-width: 44rem;
+	}
+
+	.eyebrow {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 0 0 1rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--accent-hover);
+	}
+
+	.status-dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: var(--accent);
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
 	}
 
 	.hero-title {
+		margin: 0 0 1rem;
 		font-weight: 700;
-		letter-spacing: -0.025em;
-		margin-bottom: 1.5rem;
-		font-size: 2.25rem;
-		line-height: 1.1;
+		letter-spacing: -0.03em;
+		font-size: 2.5rem;
+		line-height: 1.05;
+		color: var(--heading);
 	}
 
 	@media (min-width: 768px) {
 		.hero-title {
-			font-size: 3.75rem;
+			font-size: 3.5rem;
 		}
 	}
 
-	.hero-subtitle {
+	.hero-lead {
+		margin: 0 0 1.5rem;
 		font-size: 1.25rem;
-		color: var(--text-muted);
-		max-width: 42rem;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 2rem;
-		line-height: 1.6;
+		line-height: 1.5;
+		color: var(--text);
 	}
 
-	p {
+	.hero-body p {
+		margin: 0 0 1.25rem;
 		font-size: 1rem;
-		line-height: 1.6;
-		margin-bottom: 1.25rem;
-		max-width: 42rem;
-		margin-left: auto;
-		margin-right: auto;
+		line-height: 1.7;
+		color: var(--text-muted);
+	}
+
+	.hero-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 2rem;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.6rem 1.25rem;
+		border-radius: 8px;
+		border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--accent);
+		text-decoration: none;
+		transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+		&:hover {
+			background: color-mix(in srgb, var(--accent) 8%, transparent);
+			color: var(--accent-hover);
+		}
+	}
+
+	.btn-primary {
+		background: var(--accent);
+		border-color: var(--accent);
+		color: #fff;
+
+		&:hover {
+			background: var(--accent-hover);
+			border-color: var(--accent-hover);
+			color: #fff;
+		}
 	}
 
 	sup {
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		vertical-align: super;
 		cursor: help;
 	}
 
 	.footnotes {
-		max-width: 42rem;
-		margin: 2rem auto 0;
-		font-size: 0.875rem;
+		margin-top: 3rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--border);
+		font-size: 0.85rem;
 		color: var(--text-muted);
-		text-align: left;
 	}
 
-	.footnotes hr {
-		border: none;
-		border-top: 1px solid var(--border);
-		margin-bottom: 0.75rem;
+	.footnotes p {
+		margin: 0;
 	}
 </style>

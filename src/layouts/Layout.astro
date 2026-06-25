@@ -62,4 +62,36 @@ import Navbar from "../components/Navbar.astro";
 	::selection {
 		background: color-mix(in srgb, var(--accent) 22%, transparent);
 	}
+
+	/* Shared editorial section header — eyebrow kicker + title.
+	   Defined globally so the hero's voice carries across every page. */
+	.section {
+		margin-bottom: 3.5rem;
+	}
+
+	.section-eyebrow {
+		display: block;
+		margin-bottom: 0.5rem;
+		font-size: 0.78rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--accent-hover);
+	}
+
+	.section > h2 {
+		margin: 0 0 1.25rem;
+		color: var(--heading);
+		font-size: 1.6rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		line-height: 1.15;
+	}
+
+	.section > p {
+		margin: 0 0 1.75rem;
+		max-width: 44rem;
+		color: var(--text-muted);
+		line-height: 1.6;
+	}
 </style>

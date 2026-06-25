@@ -23,10 +23,10 @@ const currentYear = new Date().getFullYear();
 
 <style lang="scss">
   .site-footer {
-    background: #36454F;
-    color: #f8f9fa;
-    margin-top: 4rem;
-    padding: 2rem 0 2rem;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    background: var(--bg-subtle);
   }
 
   .footer-content {
@@ -43,7 +43,7 @@ const currentYear = new Date().getFullYear();
   .footer-left {
     .copyright {
       margin: 0;
-      color: rgba(248, 249, 250, 0.9);
+      color: var(--text-muted);
       font-size: 0.9rem;
     }
   }
@@ -53,19 +53,18 @@ const currentYear = new Date().getFullYear();
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      color: #f8f9fa;
+      color: var(--accent);
       text-decoration: none;
       padding: 0.5rem 1rem;
-      border: 1px solid rgba(248, 249, 250, 0.3);
-      border-radius: 4px;
+      border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+      border-radius: 8px;
       font-size: 0.9rem;
-      font-weight: 500;
-      transition: all 0.2s ease;
+      font-weight: 600;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
       &:hover {
-        background: rgba(248, 249, 250, 0.1);
-        border-color: rgba(248, 249, 250, 0.5);
-        transform: translateY(-1px);
+        background: color-mix(in srgb, var(--accent) 8%, transparent);
+        color: var(--accent-hover);
       }
 
       svg {
